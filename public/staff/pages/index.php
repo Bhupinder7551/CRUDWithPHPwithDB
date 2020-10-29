@@ -14,7 +14,7 @@
 
 <div id="content">
   <div class="pages listing">
-    <h1>Pages</h1>
+    <h1>Pages_</h1>
 
     <div class="actions">
       <a class="action" href="">Create New Page</a>
