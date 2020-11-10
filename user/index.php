@@ -2,13 +2,13 @@
 
 <html lang="en">
   <head>
-    <title>Globe Banks</title>
+    <title>Local Bank</title>
     <meta charset="utf-8">
   </head>
 
   <body>
 
-    <h1>Globe Bank: Coming Soon</h1>
+    <h1>Local Bank: Coming Soon</h1>
 
   </body>
 </html>

@@ -1,4 +1,4 @@
-<?php require_once('../../../private/initialize.php'); ?>
+<?php require_once('../../../admin/init.php'); ?>
 
 <?php
   $pages = [
@@ -10,14 +10,14 @@
 ?>
 
 <?php $page_title = 'Pages'; ?>
-<?php include(SHARED_PATH . '/staff_header.php'); ?>
+<?php include(SHARED_PATH . '/header.php'); ?>
 
 <div id="content">
   <div class="pages listing">
-    <h1>Pages_</h1>
+    <h1>Pages</h1>
 
     <div class="actions">
-      <a class="action" href="">Create New Page</a>
+      <a class="action" href="<?php echo url_for('/staff/page/new.php?id='); ?>">Create New Page</a>
     </div>
 
   	<table class="list">
@@ -34,11 +34,11 @@
       <?php foreach($pages as $page) { ?>
         <tr>
           <td><?php echo h($page['id']); ?></td>
-          <td><?php echo h($page['position']); ?></td>
+          <td><?php echo h($page['position']); ?></td>         
           <td><?php echo $page['visible'] == 1 ? 'true' : 'false'; ?></td>
     	    <td><?php echo h($page['menu_name']); ?></td>
-          <td><a class="action" href="<?php echo url_for('/staff/pages/show.php?id=' . h(u($page['id']))); ?>">View</a></td>
-          <td><a class="action" href="">Edit</a></td>
+          <td><a class="action" href="<?php echo url_for('/staff/page/show.php?id=' . h(u($page['id']))); ?>">View</a></td>
+          <td><a class="action" href="<?php echo url_for('/staff/page/edit.php?id=' . h(u($page['id']))); ?>">Edit</a></td>
           <td><a class="action" href="">Delete</a></td>
     	  </tr>
       <?php } ?>
@@ -48,4 +48,4 @@
 
 </div>
 
-<?php include(SHARED_PATH . '/staff_footer.php'); ?>
+<?php include(SHARED_PATH . '/footer.php'); ?>
